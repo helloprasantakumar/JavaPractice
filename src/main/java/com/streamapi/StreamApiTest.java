@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class StreamApiTest {
     public static void main(String[] args) {
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(0);
         arrayList.add(5);
         arrayList.add(10);
