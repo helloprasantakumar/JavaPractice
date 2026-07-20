@@ -124,5 +124,14 @@ public class CharacterListStream {
         String sorted= unsortedString.chars().sorted().mapToObj(c -> String.valueOf((char) c)).collect(Collectors.joining());
         System.out.println(sorted);
 
+        // Capitalize first letter and last of each string, filter names with length greater than 3, collect into Set.
+        List<String> fruits = Arrays.asList("apple","orange","banana","mango","kiwi","banana","papaya","guava","kiwi","apple");
+        Set<String> finalResult1 = fruits.stream().map(x-> String.valueOf(x.charAt(0)).toUpperCase().concat(x.substring(1,x.length()-1).concat(String.valueOf(x.charAt(x.length()-1)).toUpperCase()))).filter(x-> x.length()>3).collect(Collectors.toSet());
+
+        System.out.println(finalResult1);
+
+        // Convert all strings to uppercase, filter names with length greater than 5, sort in reverse order.
+         List<String> finalResult= fruits.stream().map(x->x.toUpperCase()).filter(x->x.length()>5).sorted(Comparator.reverseOrder()).toList();
+         System.out.println(finalResult);
     }
 }

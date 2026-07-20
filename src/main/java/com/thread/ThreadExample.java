@@ -20,7 +20,7 @@ public class ThreadExample {
         }*/
 
         //ExecutorService - Instead of creating threads repeatedly, it uses a Thread Pool.
-     /*   ExecutorService executor = Executors.newFixedThreadPool(2);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
 
         for (int i = 1; i <= 10; i++) {
             executor.submit(() -> {
@@ -28,9 +28,9 @@ public class ThreadExample {
             });
         }
 
-        executor.shutdown();*/
+        executor.shutdown();
 
-        ExecutorService executor = Executors.newFixedThreadPool(2);
+        /*ExecutorService executor = Executors.newFixedThreadPool(2);
 
         Future<Integer> future = executor.submit(() -> {
             return 100;
@@ -39,7 +39,7 @@ public class ThreadExample {
         System.out.println(future.get());
 
         executor.shutdown();
-
+*/
     }
 
 
